@@ -1,0 +1,607 @@
+/* Estilos Gerais */
+.carreiras-container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', 'Arial', sans-serif;
+    color: #333;
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+/* Hero Section */
+.carreiras-hero {
+    width: 100%;
+    height: 70vh;
+    min-height: 600px;
+    background: linear-gradient(135deg, #FFC900 0%, #FFA41B 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #222;
+    padding: 20px;
+    position: relative;
+}
+
+.hero-content {
+    max-width: 900px;
+    animation: fadeIn 1s ease-out;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content h1 {
+    font-size: 3.2rem;
+    margin-bottom: 25px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.hero-content p {
+    font-size: 1.6rem;
+    margin-bottom: 40px;
+    opacity: 0.9;
+}
+
+.hero-button {
+    padding: 18px 45px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    background-color: #222;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.hero-button:hover {
+    background-color: #000;
+    transform: translateY(-3px);
+    box-shadow: 0 7px 20px rgba(0,0,0,0.3);
+}
+
+.button-icon {
+    transition: transform 0.3s ease;
+}
+
+.hero-button:hover .button-icon {
+    transform: translateX(5px);
+}
+
+/* Section Header */
+.section-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 80px;
+    padding: 0 20px;
+}
+
+.section-header h2 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    color: #222;
+    position: relative;
+    display: inline-block;
+}
+
+.section-header h2::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: #FFC900;
+    border-radius: 2px;
+}
+
+.section-header p {
+    font-size: 1.3rem;
+    color: #666;
+    margin-top: 30px;
+}
+
+/* Benefícios Section */
+.beneficios-section {
+    padding: 120px 20px;
+    background-color: white;
+    position: relative;
+}
+
+.beneficios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.beneficio-card {
+    padding: 50px 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: all 0.4s ease;
+    text-align: center;
+    border: 1px solid #f0f0f0;
+    background: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.beneficio-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: #FFC900;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.beneficio-card:hover::before {
+    transform: scaleX(1);
+}
+
+.beneficio-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+    border-color: rgba(255, 201, 0, 0.3);
+}
+
+.icon-container {
+    width: 90px;
+    height: 90px;
+    background-color: rgba(255, 201, 0, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 30px;
+    transition: all 0.3s ease;
+}
+
+.beneficio-card:hover .icon-container {
+    background-color: rgba(255, 201, 0, 0.2);
+    transform: rotateY(180deg);
+}
+
+.beneficio-icon {
+    font-size: 2.8rem;
+    color: #FFC900;
+    transition: all 0.3s ease;
+}
+
+.beneficio-card:hover .beneficio-icon {
+    transform: scale(1.1);
+}
+
+.beneficio-card h3 {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    color: #222;
+    position: relative;
+}
+
+.beneficio-card p {
+    font-size: 1.15rem;
+    color: #666;
+    line-height: 1.7;
+}
+
+/* Vagas Section */
+.vagas-section {
+    padding: 100px 20px;
+    background-color: #f9f9f9;
+}
+
+.vagas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto 50px;
+}
+
+.vaga-card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: all 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.vaga-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
+
+.vaga-header {
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.vaga-icon {
+    font-size: 2.5rem;
+    color: #FFC900;
+    min-width: 50px;
+}
+
+.vaga-titulo h3 {
+    font-size: 1.5rem;
+    margin: 0 0 5px;
+    color: #222;
+}
+
+.vaga-titulo p {
+    margin: 0;
+    color: #666;
+    font-size: 0.95rem;
+}
+
+.vaga-descricao {
+    padding: 20px 30px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.vaga-descricao p {
+    margin: 0;
+    color: #555;
+    line-height: 1.7;
+}
+
+.vaga-requisitos {
+    padding: 20px 30px;
+    flex-grow: 1;
+}
+
+.vaga-requisitos h4 {
+    margin: 0 0 15px;
+    color: #222;
+    font-size: 1.1rem;
+}
+
+.vaga-requisitos ul {
+    margin: 0;
+    padding: 0 0 0 20px;
+}
+
+.vaga-requisitos li {
+    margin-bottom: 8px;
+    color: #666;
+}
+
+.vaga-button {
+    margin: 0 30px 30px;
+    padding: 15px 25px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    background-color: #FFC900;
+    color: #222;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    align-self: center;
+    width: calc(100% - 60px);
+}
+
+.vaga-button:hover {
+    background-color: #ffd633;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 201, 0, 0.3);
+}
+
+.ver-todas-button {
+    display: block;
+    margin: 0 auto;
+    padding: 15px 40px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    background-color: transparent;
+    color: #222;
+    border: 2px solid #222;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.ver-todas-button:hover {
+    background-color: rgba(0,0,0,0.05);
+    transform: translateY(-2px);
+}
+
+/* Cultura Section */
+.cultura-section {
+    padding: 120px 20px;
+    background-color: white;
+}
+
+.cultura-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.cultura-card {
+    padding: 40px 30px;
+    border-radius: 16px;
+    background-color: rgba(255, 201, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.cultura-card:hover {
+    background-color: rgba(255, 201, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+.cultura-card h3 {
+    font-size: 1.5rem;
+    margin: 0 0 20px;
+    color: #222;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.cultura-card h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background-color: #FFC900;
+}
+
+.cultura-card p {
+    margin: 0;
+    color: #555;
+    line-height: 1.7;
+}
+
+/* Processo Section */
+.processo-section {
+    padding: 100px 20px;
+    background-color: #f9f9f9;
+}
+
+.processo-steps {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.processo-steps::before {
+    content: '';
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    height: calc(100% - 100px);
+    width: 4px;
+    background-color: #FFC900;
+    z-index: 1;
+}
+
+.processo-step {
+    display: flex;
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 2;
+}
+
+.step-number {
+    width: 100px;
+    height: 100px;
+    background-color: #FFC900;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    flex-shrink: 0;
+    margin-right: 30px;
+}
+
+.step-content {
+    padding-top: 20px;
+}
+
+.step-content h3 {
+    font-size: 1.5rem;
+    margin: 0 0 15px;
+    color: #222;
+}
+
+.step-content p {
+    margin: 0;
+    color: #666;
+    line-height: 1.7;
+}
+
+/* CTA Section */
+.cta-section {
+    padding: 140px 20px;
+    background: linear-gradient(135deg, #FFC900 0%, #FFA41B 100%);
+    text-align: center;
+    color: #222;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-content {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.cta-content h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    line-height: 1.3;
+}
+
+.cta-content p {
+    font-size: 1.4rem;
+    margin-bottom: 50px;
+    opacity: 0.9;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.cta-button-primary {
+    padding: 18px 45px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    background-color: #222;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.cta-button-primary:hover {
+    background-color: #000;
+    transform: translateY(-3px);
+    box-shadow: 0 7px 20px rgba(0,0,0,0.3);
+}
+
+.cta-button-secondary {
+    padding: 18px 45px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    background-color: transparent;
+    color: #222;
+    border: 2px solid #222;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cta-button-secondary:hover {
+    background-color: rgba(0,0,0,0.1);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsividade */
+@media (max-width: 1200px) {
+    .hero-content h1 {
+        font-size: 2.8rem;
+    }
+    
+    .section-header h2 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .carreiras-hero {
+        height: 60vh;
+        min-height: 500px;
+    }
+    
+    .section-header h2 {
+        font-size: 2.2rem;
+    }
+    
+    .processo-steps::before {
+        left: 45px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+    
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+    
+    .beneficios-grid,
+    .vagas-grid,
+    .cultura-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .cta-content h2 {
+        font-size: 2.2rem;
+    }
+    
+    .cta-content p {
+        font-size: 1.2rem;
+    }
+    
+    .processo-step {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .step-number {
+        margin-bottom: 20px;
+    }
+    
+    .processo-steps::before {
+        left: 48px;
+        height: calc(100% - 60px);
+        top: 50px;
+    }
+}
+
+@media (max-width: 576px) {
+    .carreiras-hero {
+        height: 70vh;
+        min-height: 400px;
+    }
+    
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .cta-button-primary,
+    .cta-button-secondary {
+        width: 100%;
+    }
+    
+    .processo-steps::before {
+        display: none;
+    }
+}

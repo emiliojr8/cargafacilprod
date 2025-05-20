@@ -1,0 +1,90 @@
+/* Estilos Gerais */
+.cidades-container {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    min-height: 100vh; /* Ocupa toda a altura da tela */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #f4f4f4; /* Fundo cinza claro */
+    padding: 40px 20px;
+}
+
+/* Título Principal */
+.cidades-titulo {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #333; /* Texto escuro */
+}
+
+/* Container dos Cards */
+.cidades-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px; /* Espaçamento entre os cards */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Estilo dos Cards */
+.cidade-card {
+    background-color: white; /* Fundo branco */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cidade-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Ícones das Cidades */
+.cidade-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #FCCC2A; /* Cor dos ícones */
+}
+
+/* Títulos das Cidades */
+.cidade-card h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #333; /* Texto escuro */
+}
+
+/* Descrições das Cidades */
+.cidade-card p {
+    font-size: 1rem;
+    color: #666; /* Texto cinza */
+    line-height: 1.6; /* Espaçamento entre linhas */
+}
+
+/* Cores Temáticas para Cada Cidade */
+.cidade-card.maputo {
+    border-bottom: 5px solid #007bff; /* Azul para Maputo */
+}
+
+.cidade-card.matola {
+    border-bottom: 5px solid #28a745; /* Verde para Matola */
+}
+
+.cidade-card.beira {
+    border-bottom: 5px solid #dc3545; /* Vermelho para Beira */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .cidades-titulo {
+        font-size: 2rem;
+    }
+
+    .cidade-card {
+        width: 100%; /* Cards ocupam toda a largura em dispositivos móveis */
+    }
+}
