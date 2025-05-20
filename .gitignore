@@ -1,0 +1,40 @@
+# React e React Native
+node_modules/
+**/node_modules/
+.cache/
+**/.cache/
+
+# Build outputs do React
+frontend/build/
+frontend/.next/
+frontend/dist/
+
+# Android/iOS - React Native
+**/android/.gradle/
+**/android/.idea/
+**/ios/Pods/
+**/.expo/
+**/.expo-shared/
+**/.vscode/
+
+# Python / Django
+*.pyc
+__pycache__/
+backend/db.sqlite3
+backend/*.pyc
+backend/staticfiles/
+
+# Arquivos de ambiente
+.env
+.env.*
+*.env
+
+# Mac/Linux
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+
+# Logs
+*.log
