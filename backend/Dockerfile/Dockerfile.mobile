@@ -1,0 +1,16 @@
+# backend/Dockerfile.mobile
+FROM python:3.9-slim
+
+# Configurações específicas para mobile
+ENV MOBILE_API_ENABLED=1
+
+WORKDIR /app/mobile_api
+
+# Copia apenas o necessário para mobile
+COPY apps/ apps/
+COPY backend_config/ backend_config/
+COPY requirements.txt .
+
+RUN pip install --no-cache-dir -r requirements.txt
+
+CMD ["gunicorn", "--bind", "0.0.0.0:8000", "backend_config.wsgi:application"]
