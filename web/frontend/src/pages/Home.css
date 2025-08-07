@@ -1,0 +1,504 @@
+/* Estilos Gerais */
+.home {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 100%;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+/* Seção Hero com Imagem de Fundo */
+.hero-section {
+    background-image: url('/public/images/fundohome.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: calc(100vh - 60px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+    padding: 0;
+    z-index: 1;
+    box-sizing: border-box;
+}
+
+/* Painel de conteúdo */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    -webkit-backdrop-filter: blur(10px) saturate(180%);
+    backdrop-filter: blur(3px) saturate(180%);    
+    border: 1px solid rgba(255, 255, 255, 0.733);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    margin: 0 20px;
+    transition: all 0.5s ease;
+    animation: fadeIn 1.5s ease-out;
+}
+
+.hero-content:hover {
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.5);
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    animation: fadeInDown 1s ease-in-out;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    color: #fff;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    animation: fadeInUp 1s ease-in-out;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    color: #fff;
+}
+
+/* Seções de conteúdo abaixo */
+.content-section {
+    background-color: white;
+    padding: 80px 20px;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.content-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+/* Cards de veículos */
+.cards-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background-color: white;
+    border-radius: 15px;
+    padding: 30px;
+    width: 320px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border: 3px solid #FCCC2A;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.card-icon {
+    font-size: 2.5rem;
+    color: #FCCC2A;
+    margin-bottom: 20px;
+}
+
+.card h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.card p {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Seção Como Funciona */
+.steps-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 320px;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.step-icon {
+    font-size: 2.5rem;
+    color: #FCCC2A;
+    margin-bottom: 20px;
+}
+
+.step h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.step p {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Seção Sobre */
+.about-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+    transition: all 0.3s ease;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.about-container:hover {
+    transform: scale(1.02);
+}
+
+.about-icon {
+    font-size: 3.5rem;
+    color: #FCCC2A;
+    margin-bottom: 25px;
+    transition: transform 0.5s ease;
+}
+
+.about-container:hover .about-icon {
+    transform: rotate(360deg);
+}
+
+.about-container p {
+    font-size: 1.3rem;
+    color: #333;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+/* Botões Fixos - NOVO ESTILO */
+.fixed-buttons {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    z-index: 1000;
+}
+
+.btn-download, .btn-open {
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-download {
+    background-color: #FFD700;
+    color: #333;
+}
+
+.btn-open {
+    background-color: #1E90FF;
+    color: white;
+}
+
+.btn-download:hover {
+    background-color: #FFC600;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 6px 20px rgba(255, 214, 0, 0.4);
+}
+
+.btn-open:hover {
+    background-color: #187bcd;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 6px 20px rgba(30, 144, 255, 0.4);
+}
+
+.button-icon {
+    font-size: 1.3rem;
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.pulse {
+    animation: pulse 2s infinite;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+    
+    .hero-content p {
+        font-size: 1.1rem;
+    }
+    
+    .content-section h2 {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        min-height: calc(100vh - 60px);
+        margin-top: 60px;
+    }
+    
+    .hero-content {
+        padding: 25px 15px;
+        max-width: 90%;
+    }
+    
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+    
+    .hero-content p {
+        font-size: 1rem;
+    }
+    
+    .content-section {
+        padding: 60px 20px;
+    }
+    
+    .content-section h2 {
+        font-size: 2rem;
+    }
+    
+    .card, .step {
+        width: 100%;
+        max-width: 400px;
+    }
+    
+    .fixed-buttons {
+        flex-direction: column;
+        gap: 15px;
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 1.6rem;
+    }
+    
+    .hero-content p {
+        font-size: 0.9rem;
+    }
+    
+    .card-icon, .step-icon {
+        font-size: 2rem;
+    }
+    
+    .card h2, .step h3 {
+        font-size: 1.5rem;
+    }
+    
+    .about-icon {
+        font-size: 2.8rem;
+    }
+    
+    .content-section h2 {
+        font-size: 1.8rem;
+    }
+    
+    .btn-download, .btn-open {
+        padding: 12px 24px;
+        font-size: 1rem;
+    }
+}
+
+/* Estilos atualizados para o painel modal */
+
+.overlay-actions .primary-button {
+    background-color: #FFD600; /* Amarelo de ouro */
+    color: #05003de4;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.overlay-actions .primary-button:hover {
+    background-color: #FFC600;
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(255, 214, 0, 0.4);
+}
+
+.overlay-actions .secondary-button {
+    background-color: white;
+    color: #000030e1; /* Amarelo de ouro */
+    padding: 12px 24px;
+    border: 2px solid #FFD700;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.overlay-actions .secondary-button:hover {
+    background-color: #FFF8DC;
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(255, 214, 0, 0.3);
+}
+
+
+.close-button {
+  position: absolute;
+  top: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ffd9005a;
+  color: #333;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(255, 214, 0, 0.4);
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.close-button:hover {
+  background-color: #FFC600;
+  transform: translateX(-50%) scale(1.1);
+}
+
+
+/* Animação fade-in-out: o painel aparece e desaparece suavemente */
+@keyframes fadeInOut {
+  0%, 100% { opacity: 0; }
+  10%, 90% { opacity: 1; }
+}
+.fade-in-out {
+  animation: fadeInOut 8s ease-in-out infinite;
+}
+
+/* Animação color-shift: muda suavemente a cor de fundo do painel */
+@keyframes colorShift {
+  0% { background-color: rgba(255, 255, 255, 0.1); }
+  25% { background-color: rgba(255, 215, 0, 0.25); }
+  50% { background-color: rgba(255, 255, 255, 0.15); }
+  75% { background-color: rgba(255, 215, 0, 0.3); }
+  100% { background-color: rgba(255, 255, 255, 0.1); }
+}
+.color-shift {
+  animation: colorShift 8s ease-in-out infinite;
+}
+
+/* Animação blinking-text: faz o texto piscar suavemente */
+@keyframes blinkText {
+  0%, 50%, 100% { opacity: 1; }
+  25%, 75% { opacity: 0; }
+}
+.blinking-text {
+  animation: blinkText 2s step-start infinite;
+}
+
+/* Animação slide-down-up: painel desliza para baixo e sobe */
+@keyframes slideDownUp {
+  0%, 100% { transform: translateY(-30px); opacity: 0; }
+  10%, 90% { transform: translateY(0); opacity: 1; }
+}
+.slide-down-up {
+  animation: slideDownUp 8s ease-in-out infinite;
+}

@@ -1,0 +1,201 @@
+/* auth.css - Estilos para Login e Cadastro - painel compacto e moderno com amarelo */
+
+/* Reset básico */
+* {
+  box-sizing: border-box;
+}
+
+/* Overlay semi-transparente com blur */
+.login-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(30, 30, 30, 0.9);
+  -webkit-backdrop-filter: blur(6px); /* Safari */
+  backdrop-filter: blur(6px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* Container do modal - painel */
+.auth-modal-container {
+  background: #1e1e1e;
+  border-radius: 12px;
+  padding: 32px 40px;
+  width: 360px;
+  max-width: 90vw;
+  box-shadow: 0 8px 24px rgba(255, 200, 0, 0.3);
+  color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  position: relative;
+  -webkit-user-select: text;
+  user-select: text;
+}
+
+/* Título do formulário */
+.auth-modal-container h2,
+.auth-form > h2 {
+  margin-bottom: 24px;
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: #ffcc00;
+  text-align: center;
+  -webkit-user-select: text;
+  user-select: text;
+}
+
+/* Botão fechar X no canto superior direito */
+.fechar-login-x {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: transparent;
+  border: none;
+  color: #ffcc00;
+  font-size: 28px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.fechar-login-x:hover {
+  color: #fff;
+}
+
+/* Formulário */
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Tabs para seleção de usuário (cliente/motorista) */
+.auth-tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.auth-tabs button {
+  background: transparent;
+  border: none;
+  padding: 8px 24px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  color: #aaa;
+  border-bottom: 3px solid transparent;
+  transition: all 0.3s ease;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.auth-tabs button.active {
+  color: #ffcc00;
+  border-bottom: 3px solid #ffcc00;
+}
+
+.auth-tabs button:hover:not(.active) {
+  color: #ffcc00aa;
+}
+
+/* Inputs - largura limitada, altura confortável */
+.auth-form input {
+  padding: 12px 16px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 2px solid #444;
+  background-color: #2e2e2e;
+  color: #fff;
+  transition: border-color 0.3s ease;
+  width: 100%;
+  max-width: 320px;
+  align-self: center;
+  -webkit-user-select: text;
+  user-select: text;
+}
+
+.auth-form input::placeholder {
+  color: #aaa;
+}
+
+.auth-form input:focus {
+  outline: none;
+  border-color: #ffcc00;
+  background-color: #3b3b3b;
+}
+
+/* Botão principal */
+.auth-form button[type="submit"] {
+  margin-top: 12px;
+  background-color: #ffcc00;
+  color: #1e1e1e;
+  border: none;
+  border-radius: 10px;
+  padding: 14px 0;
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  max-width: 320px;
+  align-self: center;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.auth-form button[type="submit"]:hover:not(:disabled) {
+  background-color: #e6b800;
+}
+
+.auth-form button[type="submit"]:disabled {
+  background-color: #a68e00;
+  cursor: not-allowed;
+}
+
+/* Mensagens de erro */
+.error-message {
+  color: #ff5555;
+  font-size: 0.9rem;
+  margin-top: -10px;
+  margin-bottom: 8px;
+  text-align: center;
+  max-width: 320px;
+  align-self: center;
+  -webkit-user-select: text;
+  user-select: text;
+}
+
+/* Mensagem de sucesso */
+.success-message {
+  color: #aee6a0;
+  font-size: 1rem;
+  margin-top: -10px;
+  margin-bottom: 10px;
+  font-weight: 600;
+  text-align: center;
+  max-width: 320px;
+  align-self: center;
+  -webkit-user-select: text;
+  user-select: text;
+}
+
+/* Ajuste responsivo para telas maiores (tablets) */
+@media (min-width: 768px) {
+  .auth-modal-container {
+    width: 400px;
+    padding: 40px 48px;
+  }
+
+  .auth-form input,
+  .auth-form button[type="submit"] {
+    max-width: 360px;
+  }
+}

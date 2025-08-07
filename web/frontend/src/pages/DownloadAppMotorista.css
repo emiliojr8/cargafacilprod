@@ -1,0 +1,443 @@
+.download-app-motorista-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .download-app-motorista-page {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(135deg, #f0f5ff 0%, #e0e9f8 100%);
+      flex: 1;
+      padding: 2rem;
+      color: #333;
+      position: relative;
+    }
+    
+    .back-button {
+      position: absolute;
+      top: 2rem;
+      left: 2rem;
+      background: rgba(255, 255, 255, 0.9);
+      border: none;
+      padding: 0.8rem 1.5rem;
+      border-radius: 50px;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      cursor: pointer;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      z-index: 10;
+    }
+    
+    .back-button:hover {
+      background: white;
+      transform: translateX(-5px);
+    }
+    
+    .download-app-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Estilos do cabeçalho */
+    .header-section {
+      color: white;
+      padding: 3rem 2rem;
+      text-align: center;
+      transition: all 0.5s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .header-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('/public/images/truck-background.jpg') center/cover;
+      opacity: 0.2;
+      z-index: 0;
+    }
+    
+    .header-section.normal {
+      background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+    }
+    
+    .header-section.warning {
+      background: linear-gradient(135deg, #e67e22 0%, #d35400 100%);
+      animation: pulseWarning 2s infinite;
+    }
+    
+    .header-section.critical {
+      background: linear-gradient(135deg, #c0392b 0%, #e74c3c 100%);
+      animation: pulseCritical 1s infinite;
+    }
+    
+    .header-section h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      position: relative;
+      z-index: 1;
+    }
+    
+    .highlight {
+      color: #f1c40f;
+      font-weight: 700;
+    }
+    
+    .subtitle {
+      font-size: 1.2rem;
+      opacity: 0.9;
+      margin-bottom: 2rem;
+      position: relative;
+      z-index: 1;
+    }
+    
+    /* Estilos do contador */
+    .countdown {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 2rem;
+      flex-wrap: wrap;
+      position: relative;
+      z-index: 1;
+    }
+    
+    .countdown-item {
+      background: rgba(255, 255, 255, 0.3);
+      border-radius: 10px;
+      padding: 1rem;
+      min-width: 80px;
+      text-align: center;
+      -webkit-backdrop-filter: blur(5px);
+      backdrop-filter: blur(5px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    .countdown-item .number {
+      font-size: 2.5rem;
+      font-weight: 700;
+      display: block;
+      line-height: 1;
+      color: white;
+    }
+    
+    .countdown-item .label {
+      font-size: 0.9rem;
+      opacity: 0.9;
+      text-transform: uppercase;
+      color: white;
+      font-weight: 500;
+    }
+    
+    .special-message {
+      margin-top: 1.5rem;
+      font-size: 1.2rem;
+      font-weight: bold;
+      background: rgba(255, 255, 255, 0.3);
+      padding: 0.8rem 1.5rem;
+      border-radius: 20px;
+      display: inline-block;
+      position: relative;
+      z-index: 1;
+      -webkit-backdrop-filter: blur(5px);
+      backdrop-filter: blur(5px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    /* Grid de conteúdo */
+    .content-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      padding: 3rem;
+    }
+    
+    /* Seção do mockup */
+    .app-mockup-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .mockup-image {
+      max-width: 320px;
+      border-radius: 20px;
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+      margin-bottom: 2rem;
+      transition: transform 0.3s ease;
+      border: 5px solid #f1c40f;
+    }
+    
+    .mockup-image:hover {
+      transform: scale(1.03);
+    }
+    
+    .benefits-list {
+      background: #f8f9fa;
+      padding: 1.5rem;
+      border-radius: 15px;
+      width: 100%;
+      border-left: 5px solid #3498db;
+    }
+    
+    .benefits-list h3 {
+      color: #2c3e50;
+      margin-bottom: 1.5rem;
+      font-size: 1.4rem;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+    
+    .benefits-list ul {
+      list-style: none;
+      padding: 0;
+    }
+    
+    .benefits-list li {
+      margin-bottom: 1rem;
+      padding-left: 2rem;
+      position: relative;
+      line-height: 1.6;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .benefits-list li strong {
+      color: #2c3e50;
+    }
+    
+    /* Formulário */
+    .signup-form {
+      background: white;
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+      border-right: 5px solid #f1c40f;
+    }
+    
+    .signup-form h2 {
+      color: #2c3e50;
+      margin-bottom: 1.5rem;
+      font-size: 1.8rem;
+    }
+    
+    .input-group {
+      position: relative;
+      margin-bottom: 1.5rem;
+    }
+    
+    .input-icon {
+      position: absolute;
+      left: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #3498db;
+    }
+    
+    .input-group input {
+      width: 100%;
+      padding: 1rem 1rem 1rem 3rem;
+      border: 2px solid #e9ecef;
+      border-radius: 10px;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+    }
+    
+    .input-group input:focus {
+      border-color: #3498db;
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+    }
+    
+    .early-access {
+      background: #f8f9fa;
+      padding: 1.2rem;
+      border-radius: 10px;
+      margin: 1.5rem 0;
+      border-left: 4px solid #f1c40f;
+    }
+    
+    .early-access p {
+      font-weight: 600;
+      color: #2c3e50;
+      margin-bottom: 0.8rem;
+    }
+    
+    .early-access ul {
+      list-style: none;
+      padding: 0;
+    }
+    
+    .early-access li {
+      margin-bottom: 0.5rem;
+      padding-left: 1.5rem;
+      position: relative;
+    }
+    
+    .early-access li:before {
+      content: '✔';
+      position: absolute;
+      left: 0;
+      color: #27ae60;
+      font-weight: bold;
+    }
+    
+    .notify-button {
+      background: linear-gradient(135deg, #f1c40f 0%, #f39c12 100%);
+      color: #2c3e50;
+      border: none;
+      width: 100%;
+      padding: 1.2rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border-radius: 10px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.8rem;
+      transition: all 0.3s ease;
+      margin-top: 1rem;
+      box-shadow: 0 4px 15px rgba(241, 196, 15, 0.4);
+    }
+    
+    .notify-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(241, 196, 15, 0.5);
+    }
+    
+    /* Badges das lojas */
+    .store-badges {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 2rem;
+      background: #f8f9fa;
+      border-top: 1px solid #e9ecef;
+    }
+    
+    .badge-container {
+      position: relative;
+      text-align: center;
+    }
+    
+    .store-badge {
+      height: 60px;
+      transition: transform 0.3s ease;
+    }
+    
+    .store-badge:hover {
+      transform: scale(1.05);
+    }
+    
+    .badge-label {
+      display: block;
+      margin-top: 0.5rem;
+      font-size: 0.9rem;
+      color: #6c757d;
+      font-weight: 500;
+    }
+    
+    /* Animações */
+    @keyframes pulseWarning {
+      0% { opacity: 1; }
+      50% { opacity: 0.9; }
+      100% { opacity: 1; }
+    }
+    
+    @keyframes pulseCritical {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.02); }
+      100% { transform: scale(1); }
+    }
+    
+    /* Responsividade */
+    @media (max-width: 1024px) {
+      .content-grid {
+        gap: 1.5rem;
+        padding: 2rem;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .content-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .header-section h1 {
+        font-size: 2rem;
+      }
+      
+      .countdown {
+        gap: 1rem;
+      }
+      
+      .countdown-item {
+        min-width: 70px;
+        padding: 0.8rem;
+      }
+      
+      .countdown-item .number {
+        font-size: 2rem;
+      }
+      
+      .store-badges {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .mockup-image {
+        max-width: 280px;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .download-app-motorista-page {
+        padding: 1rem;
+      }
+      
+      .header-section {
+        padding: 2rem 1rem;
+      }
+      
+      .header-section h1 {
+        font-size: 1.8rem;
+      }
+      
+      .countdown-item {
+        min-width: 60px;
+      }
+      
+      .countdown-item .number {
+        font-size: 1.8rem;
+      }
+      
+      .countdown-item .label {
+        font-size: 0.8rem;
+      }
+      
+      .special-message {
+        font-size: 1rem;
+        padding: 0.6rem 1rem;
+      }
+      
+      .benefits-list h3 {
+        font-size: 1.2rem;
+      }
+      
+      .signup-form h2 {
+        font-size: 1.5rem;
+      }
+    }

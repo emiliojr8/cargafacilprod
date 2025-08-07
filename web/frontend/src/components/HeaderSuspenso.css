@@ -1,0 +1,134 @@
+/* HeaderSuspenso.css */
+
+/* NAV FIXA (HEADER FIXO) */
+.fixed-nav {
+  position: fixed;
+  top: 20px; /* espaço do topo */
+  left: 20px; /* espaço da esquerda */
+  right: 20px; /* espaço da direita */
+  height: 70px;
+  background-color: #FFD700;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  padding: 0 1.5rem;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 26px; /* bordas arredondadas */
+  z-index: 999;
+}
+
+/* LOGO CENTRAL */
+.logo-centro {
+  grid-column: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.logo-centro:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.logo-centro .logo-image {
+  height: 65px;
+  object-fit: contain;
+}
+
+/* PERFIL À DIREITA */
+.perfil {
+  grid-column: 3;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+}
+
+/* BOTÃO DO PERFIL (ICONE + TEXTO) */
+.perfil-icon {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  transition: background 0.3s ease;
+}
+
+.perfil-icon:hover { 
+  background: rgba(229, 255, 0, 0.553);
+}
+
+/* DROPDOWN DO PERFIL */
+.perfil-dropdown {
+  position: absolute;
+  right: 0;
+  top: 110%;
+  background: #FFD700; /* amarelo como a nav */
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  list-style: none;
+  padding: 0.5rem 0;
+  margin-top: 0.5rem;
+  width: 180px;
+  z-index: 9999;
+  display: none;
+}
+
+.perfil-dropdown.visible {
+  display: block;
+}
+
+.perfil-dropdown li {
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background 0.2s ease;
+  color: #333;
+  font-weight: 500;
+}
+
+.perfil-dropdown li:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* BOTÃO VOLTAR FIXO */
+.back-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.95);
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
+  margin: 4.2rem -2rem 2rem;
+}
+
+.back-button:hover {
+  background: rgb(255, 255, 255);
+  transform: translateX(-5px);
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .back-button {
+    top: 90px;
+    left: 1rem;
+    padding: 0.6rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .back-button {
+    top: 80px;
+    font-size: 0.9rem;
+  }
+}

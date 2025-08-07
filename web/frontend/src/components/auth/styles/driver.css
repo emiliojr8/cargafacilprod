@@ -1,0 +1,31 @@
+.driver-badge {
+  background-color: #fef3c7;
+  color: #92400e;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+}
+
+.driver-field {
+  border-left: 4px solid #d97706;
+  padding-left: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.driver-field label {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+  color: #4b5563;
+}
+
+.driver-field input,
+.driver-field select {
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto;
+  padding: 0.5rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.25rem;
+  display: block;
+}
