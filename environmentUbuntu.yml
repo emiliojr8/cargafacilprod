@@ -3,22 +3,31 @@ channels:
   - conda-forge
   - defaults
 dependencies:
+  # Versão principal do Python
   - python=3.10
+
+  # Geoespaciais essenciais
   - gdal=3.6.2
   - geos
   - proj
   - libspatialite
+
+  # Suporte a imagens e fontes
   - libtiff
-  - libpng
-  - libpq
-  - postgresql
-  - curl
-  - sqlite
   - cairo
   - freetype
   - fontconfig
+
+  # Database drivers
+  - libpq
+  - sqlite
+
+  # Utilitários
+  - curl
   - pip
   - wheel
+
+  # Dependências via pip
   - pip:
       - africastalking==1.2.9
       - asgiref==3.8.1
